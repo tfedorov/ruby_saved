@@ -1,0 +1,25 @@
+%ul
+  %li
+    Status -
+    %b= ticket.active_reply.try(:status).try(:status)
+  %li
+    %b= ticket.active_reply.staff_name
+  %li
+    Subject -
+    %b
+      = ticket.subject
+  %li
+    Body -
+    %b
+      = ticket.body
+  %li
+    Department -
+    %b
+      = ticket.department
+  %li
+    Customer -
+    %b
+      = ticket.email
+  %li
+    %a{:href => staff_reply_path(ticket.unique_reference)}
+      = ticket.unique_reference

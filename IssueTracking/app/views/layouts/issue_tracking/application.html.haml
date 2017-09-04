@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %title IssueTracking
+    = stylesheet_link_tag    "issue_tracking/application", media: "all"
+    = javascript_include_tag "issue_tracking/application"
+    = csrf_meta_tags
+  %body
+    = yield

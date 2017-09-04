@@ -1,0 +1,23 @@
+source 'https://rubygems.org'
+
+gemspec
+
+# for dummy app
+gem 'devise'
+gem 'email_validator'
+gem 'haml'
+# gem 'sidekiq'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
+  gem 'haml-rails'
+end
+
+group :test, :development do
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'awesome_print', require: 'ap'
+  gem 'meta_request'
+end

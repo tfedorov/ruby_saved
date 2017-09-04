@@ -1,0 +1,29 @@
+= form_for :ticket , url: locals[:submit_url] do |f|
+  %table
+    %tr
+      %td
+        = f.label :email
+        %br
+          = f.text_field :email
+      %td
+        = f.label :first_name
+        %br
+          = f.text_field :first_name
+      %td
+        = f.label :last_name
+        %br
+          = f.text_field :last_name
+      %td
+        = f.label :subject
+        %br
+          = f.text_area :subject
+      %td
+        = f.label :body
+        %br
+          = f.text_area :body
+      %td
+        = f.label :department
+        %br
+          = f.text_field :department
+      %td
+        = f.submit

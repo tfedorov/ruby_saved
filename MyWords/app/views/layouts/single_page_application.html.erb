@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <%= render partial: "layouts/loginned"%>
+<% else %>
+   <%= render partial: "layouts/guest"%>
+<% end %>
+
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  banner_id: 
+  site_id: 
+  max_show: 1
+  show_number: 1
+  click_number: 1
+
+two:
+  banner_id: 
+  site_id: 
+  max_show: 1
+  show_number: 1
+  click_number: 1

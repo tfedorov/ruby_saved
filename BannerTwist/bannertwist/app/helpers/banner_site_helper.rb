@@ -1,0 +1,2 @@
+module BannerSiteHelper
+end

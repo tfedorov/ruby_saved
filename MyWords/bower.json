@@ -1,0 +1,22 @@
+{
+  "name": "MyWords",
+  "homepage": "https://github.com/tfedorov/MyWords",
+  "authors": [
+    "Taras Fedorov <t.fedorov.s@gmail.com>"
+  ],
+  "description": "My first bower file",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5"
+  }
+}

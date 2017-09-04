@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      Hello #{@ticket.first_name}
+    %p
+      You have successfully register ticket #{@ticket.unique_reference}.
+    %p
+      See your ticket on: #{@ticket.url}.
+    %p Thanks for joining and have a great day!

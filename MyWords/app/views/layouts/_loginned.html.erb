@@ -1,0 +1,37 @@
+<% content_for :head do %>
+<title>Words of <%= current_user.email %></title>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+
+<% end %>
+
+<body ng-app="myWords" ng-controller="UserWordCtrl">
+  <div id="user_field">
+    Hello: <b><%= current_user.email %></b>
+    <%= button_to "Logout", destroy_user_session_path, :method => "delete" %>
+  </div>
+  <form ng-submit="addWords()">
+      <textarea ng-model="rawWords" cols="45" name="text"></textarea>
+      <p/><button type="submit">Post</button>
+  </form>
+  <p><b>What You want to see?:</b><br/>
+     <br/>Last insertation: <%= current_user.last_user_insertation.updated_at %><br/>
+     <input type="radio" name="extractWordStrategy" ng-model="extractWordStrategy" ng-change="showWords()" value="insertation_unknown"> Unknown words
+     <input type="radio" name="extractWordStrategy" ng-model="extractWordStrategy" ng-change="showWords()" value="insertation_new"> Known words
+     <br/>All your words:<br/>
+     <input type="radio" name="extractWordStrategy" ng-model="extractWordStrategy" ng-change="showWords()" value="unknown"> Unkown words
+     <input type="radio" name="extractWordStrategy" ng-model="extractWordStrategy" ng-change="showWords()" value="known"> Known words
+     <input type="radio" name="extractWordStrategy" ng-model="extractWordStrategy" ng-change="showWords()" value="all"> All words
+
+    </p>
+  <table id='words'>
+      <th>Word</th>
+      <th>Do You know it?</th>
+      <th>Is it real word?</th>
+      <tr ng-repeat="word in words">
+          <td><b>{{word.english}}</b></td>
+          <td><input type="checkbox" ng-model="word.known" ng-change="makeAsKnown(word.id)"/></td>
+          <td><input type="checkbox" ng-model="word.correct"ng-change="makeAsNotWord(word.id)"/></td>
+      </tr>
+  </table>
+</body>

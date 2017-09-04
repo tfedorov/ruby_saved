@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  known: false
+  number: 1
+  user_id: 
+  word_id: 
+
+two:
+  known: false
+  number: 1
+  user_id: 
+  word_id: 

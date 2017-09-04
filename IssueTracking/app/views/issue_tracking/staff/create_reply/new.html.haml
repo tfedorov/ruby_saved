@@ -1,0 +1,23 @@
+%h1 Create Reply
+Ticket:  #{@reply.ticket.unique_reference}
+
+\#{render "issue_tracking/common/ticket", ticket: @reply.ticket}
+History:
+\#{render "issue_tracking/common/replies"}
+= form_for :reply , url: staff_reply_path do |f|
+  %table
+    %tr
+      %td
+        = f.label :staff
+        %br
+          = f.select :user_id, @available_users, include_blank: true
+      %td
+        = f.label :status
+        %br
+          = f.collection_select(:status_id, @statuses, :id, :status)
+      %td
+        = f.label :reply_text
+        %br
+          = f.text_area :reply_text
+      %td
+        = f.submit

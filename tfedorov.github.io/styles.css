@@ -1,0 +1,44 @@
+.no-support-message {
+    display: none;
+}
+.impress-not-supported .no-support-message {
+    display: block;
+}
+body {
+    background: #EBEBEB;
+    font: 50px "Calibri", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #333;
+}
+.step {
+    width: 940px;
+    margin: 0 auto 24px auto;
+    text-align: left;
+}
+.green, .anketa dd {
+    color: #364D13;
+}
+.red, dt {
+    color: #77051B;
+}
+
+table{
+    font-size: 50px;
+}
+.big_font {
+    font-size: 65px;
+}
+td{
+	vertical-align: top;
+}
+.small_font, dt, dl, dd  {
+    font-size: 35px;
+}
+.anketa_ava, .anketa{
+	width: 400px;
+}
+.anketa_ava img{
+    max-width:400px;
+}
+.anketa {
+	text-align: right;
+}

@@ -1,0 +1,13 @@
+%table{:border => "1"}
+  %tr
+    %th status
+    %th owner
+    %th reply
+  - @ticket.replies.each do |reply|
+    %tr
+      %td
+        = reply.status.try(:status)
+      %td
+        = reply.user.try(:email)
+      %td
+        = reply.reply_text

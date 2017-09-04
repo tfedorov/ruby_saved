@@ -1,0 +1,8 @@
+%h1
+  List of
+  = action_name
+  tickets
+%ol
+  - @tickets.each do |ticket|
+    %li
+      = render "issue_tracking/common/ticket", ticket: ticket
